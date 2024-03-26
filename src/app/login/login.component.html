@@ -1,0 +1,17 @@
+<div class="d-flex justify-content-center align-items-center"> 
+    <form class="form" [formGroup]="loginForm" (ngSubmit)="onLogin()">
+        <p class="title">Login </p>
+        <p class="message">Login now and get full access to our app. </p>
+
+        <label>
+            <input class="input" type="text" formControlName="userName">
+            <span>User Name</span>
+        </label>
+        <label>
+            <input class="input" type="password" formControlName="loginPassword">
+            <span>Password</span>
+        </label>
+        <button class="submit" type="submit" [disabled]="loginForm.valid == false">LogIn</button>
+        <p class="signin">Don't have an acount ? <a style="cursor: pointer;" (click)="redirectToSignIn()">SignIn</a> </p>
+    </form>
+</div>
